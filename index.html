@@ -19,15 +19,15 @@
     <h3>Right-click / Inspect, then select console</h3>
 
     <p>Enter your name:
-      <input id="guest" type="text" value="Eden">
+      <input id="guest" type="text" value="gopi">
     </p>
 
-    <p>Enter first number:
-      <input id="firstNumber" type="number" value="7">
+    <p>Enter peoplePerCar:
+      <input id="people" type="number" value="peoplePerCar">
     </p>
 
-    <p>Enter second number:
-      <input id="secondNumber" type="number" value="12">
+    <p>Enter cars:
+      <input id="car" type="number" value="cars">
     </p>
 
     <button id="clicker" class="btn btn-primary">Click me!</button>
@@ -41,20 +41,20 @@
 
     console.log('Declare testable functions.....................')
 
-    function add(x, y) {
-      return x + y
+    function mul(peoplePerCar, cars) {
+      return  peoplePerCar *cars
     }
-    console.log('Defined add=' + add)
+    console.log('Defined mul=' + mul)
 
     console.log('Declare event listeners .......................')
 
     document.getElementById('clicker').addEventListener('click', function () {
       const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('firstNumber').value)
+      const i = parseInt(document.getElementById('people').value)
       console.log('i=' + i)
-      const j = parseInt(document.getElementById('secondNumber').value)
+      const j = parseInt(document.getElementById('car').value)
       console.log('j=' + j)
-      const ans = s + ', your sum is ' + add(i, j) + '.'
+      const ans = s + ', total number of people are ' + mul(i, j) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
