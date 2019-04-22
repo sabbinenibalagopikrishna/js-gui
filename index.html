@@ -22,12 +22,12 @@
       <input id="guest" type="text" value="gopi">
     </p>
 
-    <p>Enter peoplePerCar:
-      <input id="people" type="number" value="peoplePerCar">
+    <p>Enter itemsPerBag:
+      <input id="item" type="number" value="	itemsPerBag">
     </p>
 
-    <p>Enter cars:
-      <input id="car" type="number" value="cars">
+    <p>Enter bags:
+      <input id="bag" type="number" value="bags">
     </p>
 
     <button id="clicker" class="btn btn-primary">Click me!</button>
@@ -41,8 +41,8 @@
 
     console.log('Declare testable functions.....................')
 
-    function mul(peoplePerCar, cars) {
-      return  peoplePerCar *cars
+    function mul(itemsPerBag, bags) {
+      return  itemsPerBag *bags
     }
     console.log('Defined mul=' + mul)
 
@@ -50,11 +50,11 @@
 
     document.getElementById('clicker').addEventListener('click', function () {
       const s = document.getElementById('guest').value
-      const i = parseInt(document.getElementById('people').value)
+      const i = parseInt(document.getElementById('item').value)
       console.log('i=' + i)
-      const j = parseInt(document.getElementById('car').value)
+      const j = parseInt(document.getElementById('bag').value)
       console.log('j=' + j)
-      const ans = s + ', total number of people are ' + mul(i, j) + '.'
+      const ans = s + ', total number of items are ' + mul(i, j) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
